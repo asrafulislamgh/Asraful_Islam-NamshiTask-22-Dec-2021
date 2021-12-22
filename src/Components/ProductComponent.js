@@ -5,7 +5,6 @@ import "./ProductComponent.css";
 
 const ProductComponent = () => {
   const products = useSelector((state) => state.allProducts.products);
-  // const { title, category } = products[0];
   const renderList = products.map((product) => {
     const { title, image, price, description } = product;
     return (
@@ -20,10 +19,20 @@ const ProductComponent = () => {
           </div>
           <Card.Body style={{ width: "70%" }}>
             <Card.Title>{title}</Card.Title>
-            <Card.Text className="text-truncate" style={{ maxWidth: "300px" }}>
-              ${description}
+            <div className="text-truncate-container">
+              <Card.Text
+                className="text-truncate"
+                style={{ maxHeight: "300px" }}
+              >
+                ${description}
+              </Card.Text>
+            </div>
+            <Card.Text
+              style={{ padding: "5px", fontSize: "1.3rem", fontWeight: "bold" }}
+            >
+              + <span>0</span> -
             </Card.Text>
-            <Card.Text>${price}</Card.Text>
+            <Card.Text style={{ fontSize: "2rem" }}>${price}</Card.Text>
             <Button>Add to Cart</Button>
           </Card.Body>
         </Card>
