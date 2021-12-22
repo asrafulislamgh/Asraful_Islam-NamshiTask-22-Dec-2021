@@ -1,0 +1,24 @@
+.cart-img {
+  padding: 30px;
+  max-height: 100%;
+}
+.img-container {
+  width: 30%;
+}
+.sideBar {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.sideBar li {
+  padding: 10px;
+}
+.sideBar li:hover,
+.active {
+  background-color: wheat;
+  cursor: pointer;
+}
